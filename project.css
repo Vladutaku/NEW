@@ -189,9 +189,12 @@ hr {
         height: 500px;
     }
     .prev-button {
-        top: 60%;
+        top: 55%;
     }
     .next-button {
-        top: 60%;
+        top: 55%;
+    }
+    article div section p {
+        height: 100px;
     }
 }
