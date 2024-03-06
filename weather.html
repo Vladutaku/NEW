@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aesthetic</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+    <nav>
+
+        <a href="home.html">
+            <div class="slide"></div>
+            <div><p>Home</p></div>
+        </a>
+
+        <a href="project.html">
+            <div class="slide"></div>
+            <div><p>Project</p></div>
+        </a>
+            
+        <a href="">
+            <div class="slide"></div>
+            <div><p>Game</p></div>
+        </a>
+
+        <a href="weather.html">
+            <div class="slide"></div>
+            <div><p>Weather</p></div>
+        </a>
+
+        <a href="about.html">
+            <div class="slide"></div>
+            <div><p>About</p></div>
+        </a>
+        
+    </nav>
+
+    <div class="content">
+        <div id="weather-container">
+            
+            <input type="text" id="city" placeholder="Enter city">
+
+            <button onclick="getWeather()">Search</button>
+
+            <img id="weather-icon" alt="Weather Icon">
+    
+            <div id="temp-div"></div>
+    
+            <div id="weather-info"></div>
+    
+            <div id="hourly-forecast"></div>
+            
+        </div>
+        <script src="weather.js"></script>
+    </div>
+
+</body>
+
+
+</html>

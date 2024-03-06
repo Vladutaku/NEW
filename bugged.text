@@ -1,0 +1,30 @@
+function displayRandomImage() {
+    var imgContainers = document.querySelectorAll('.img-con');
+
+    imgContainers.forEach(function(imgContainer) {
+        var divs = imgContainer.querySelectorAll('div');
+        
+        divs.forEach(function(div) {
+            var imgs = Array.from(div.querySelectorAll('img'));
+            
+            if (imgs.length > 0) {
+                var randomIndex = Math.floor(Math.random() * imgs.length);
+                
+                imgs.forEach(function(img) {
+                    img.style.display = 'none';
+                });
+                
+                var selectedImg = imgs[randomIndex];
+                selectedImg.style.display = 'block';
+                
+                imgs.splice(randomIndex, 1);
+                
+                // Call the function again after a short delay to display the next image
+                setTimeout(displayRandomImage, 1000); // Change the delay as needed
+            }
+        });
+    });
+}
+
+// Call the function to start displaying random images
+displayRandomImage();

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aesthetic</title>
+    <link rel="stylesheet" href="about.css">
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "A0Oe6Sgeu7U4GtjHZ",
+        });
+    })();
+    </script>
+
+    <script src="about.js"></script>
+</head>
+
+
+<body>
+    <nav>
+
+        <a href="home.html">
+            <div class="slide"></div>
+            <div><p>Home</p></div>
+        </a>
+
+        <a href="project.html">
+            <div class="slide"></div>
+            <div><p>Project</p></div>
+        </a>
+            
+        <a href="">
+            <div class="slide"></div>
+            <div><p>Game</p></div>
+        </a>
+
+        <a href="weather.html">
+            <div class="slide"></div>
+            <div><p>Weather</p></div>
+        </a>
+
+        <a href="">
+            <div class="slide"></div>
+            <div><p>About</p></div>
+        </a>
+        
+    </nav>
+
+    <div class="mdiv">
+        <div class="content">
+            <h1>About this Website</h1>
+            <h3>Created by Waldemar Noll and the Internet</h3>
+            <p>Everything on this responsive website was created by me using online resources</p>
+            <p>This is the first project I've published on GitHub, mainly because it's a requirement for using GitHub Pages. The project is far from finished and will take some time before it is something I consider done. If you have any feedback, I would be happy to hear it !</p>
+        </div>
+        <form>
+            <h1>Contact Me</h1>
+            <div class="input group">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <textarea id="message" rows="12" placeholder="Your Message goes here. Select the Textbox and you can resize the window to your liking by dragging the white square"></textarea>
+                <button type="submit" onclick="sendMail"><div class="nahIDwin">Send</div></button>
+        </form>
+    </div>
+</body>
+
+
+</html>

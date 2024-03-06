@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+:root {
+    --text: #0A0C0F;
+    --background: rgb(232,234,226);
+    --accent: rgb(196, 194, 192);
+
+    --windows-window: rgb(192, 192, 192);
+    --windows-window-accent: rgb(133, 133, 133);
+    --windows-hover: rgb(165, 165, 165);
+    --windows-teritary: rgb(1, 4, 129);
+}
+* {
+    background-color: var(--background);
+    color: var(--text);
+    margin: 0;
+    font-family: "Quicksand", sans-serif;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6%;
+
+    background: var(--background);
+    box-shadow: 1px 0px 8px rgb(98, 98, 98);
+
+    display: flex;
+    z-index: 2;
+}
+nav a {
+    z-index: 1;
+    width: 20%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.6s ease;
+    text-decoration: none;
+    list-style: none;
+}
+nav a:hover .slide {
+    width: 20%;
+}
+nav a div {
+    transition: all 0.6s ease;
+    background: transparent;
+}
+nav a div p {
+    font-size: 1.3rem;
+    background: transparent;
+    transition: all 0.6s ease;
+}
+.slide {
+    z-index: -1;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: var(--accent);
+}
+
+
+
+.content {
+    position: absolute;
+    top: 6%;
+    height: 94%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+#weather-container {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+input {
+    margin-top: 3%;
+    padding: 0.5%;
+    width: 90%;
+    font-size: 1rem;
+    box-sizing: border-box;
+    border: 4px double var(--accent);
+}
+button {
+    background: var(--background);
+    margin-top: 2%;
+    padding: 2%;
+    color: var(--text);
+    border: none;
+    cursor: pointer;
+    width: 300px;
+    font-size: 1.6rem;
+    transition: 0.6s ease;
+    border: 4px double var(--accent);
+}
+button:hover {
+    letter-spacing: 5px;
+    border-bottom: 4px solid var(--accent);
+    border-top: 4px double var(--accent);
+    border-right: 4px double var(--accent);
+    border-left: 4px double var(--accent);
+}
+
+input:focus {
+    outline: none;
+}
+#temp-div p {
+    font-size: 3.6rem;
+}
+#weather-info {
+    margin-top: 1%;
+    font-size: 2.3rem;
+}
+#weather-icon {
+    width: 12%;
+    margin: 0 auto 10px;
+    margin-bottom: 0;
+    display: none;
+}
+#hourly-forecast {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.hourly-item {
+    margin-top: 2%;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    color: white;
+}
+.hourly-item img{
+    width: 120%;
+    height: 120%;
+}
+#hourly-heading {
+    background: transparent;
+}
+
+
+@media (max-width: 900px) {
+    #weather-icon {
+        width: 40%;
+    }
+    input {
+        padding: 1.5%;
+    }
+}
